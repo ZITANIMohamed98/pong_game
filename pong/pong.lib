@@ -1,0 +1,84 @@
+timestamp=1680175045719
+
+[~A]
+C:/My_Designs/pong/pong/src/ball_fsm.v=0*205224*206855
+C:/My_Designs/pong/pong/src/drawer.v=0*153486*154699
+C:/My_Designs/pong/pong/src/paddle_fsm.v=0*210098*211187
+C:/My_Designs/pong/pong/src/pong_main.v=0*155838*157054
+C:/My_Designs/pong/pong/src/tb.v=0*192701*194150
+C:/My_Designs/pong/pong/src/tb.v_delay.v_pong_main.v_vga_sync_gen.v_drawer.v_ball_fsm.v_paddle_fsm.v=0*197447*203892
+LastVerilogToplevel=tb
+ModifyID=49
+Version=74
+c:/My_Designs/pong/pong/src/drawer.v=0*10314*11334
+c:/My_Designs/pong/pong/src/tb.v_delay.v_pong_main.v_vga_sync_gen.v_drawer.v_ball_fsm.v_paddle_fsm.v=0*1400*4981
+
+[~MFT]
+0=6|0pong.mgf|211187|130627
+1=4|1pong.mgf|633543|602431
+3=8|3pong.mgf|640997|605508
+
+[$root]
+A/$root=22|||1*633169
+BinW64/$root=3*636258
+SLP=3*636373
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c9216f55a337e7ccac2f5ffef76c97d81050f
+
+[ball_fsm]
+A/ball_fsm=22|../src/ball_fsm.v|1|1*623288
+BinW64/ball_fsm=3*620675
+R=../src/ball_fsm.v|1
+SLP=3*626942
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|0383bd4203fb66fb67ba1ecb189f982d9edabdbd6a10eae3f9e581bcfd56130fbf1863c09a0044dfceb1d0442fe33f13
+
+[delay]
+A/delay=22|../src/delay.v|1|1*601442
+BinW64/delay=3*595807
+R=../src/delay.v|1
+SLP=3*597839
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|f5a6c04acf499dc0ea18f307c3269eaf33a1f72f1402e8f04427bb7fc64d9ebd
+
+[drawer]
+A/drawer=22|../src/drawer.v|1|1*618561
+BinW64/drawer=3*613356
+R=../src/drawer.v|1
+SLP=3*618400
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|5d31cfe83b9d92bdd253b6ad006eae3bf6abf28603049cb3bf9e5d7a31a3f1f2
+
+[paddle_fsm]
+A/paddle_fsm=22|../src/paddle_fsm.v|1|1*633543
+BinW64/paddle_fsm=3*636441
+R=../src/paddle_fsm.v|1
+SLP=3*640997
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|d4885f1513f54285e2a5d4989336e6ad96fdcf0b3367042b8e67754cdd796d97fc7b84c82c1889e58d94a32c6331a220
+
+[pong_main]
+A/pong_main=22|../src/pong_main.v|1|1*604247
+BinW64/pong_main=3*598281
+R=../src/pong_main.v|1
+SLP=3*599004
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|a0a4003288634f5726a3a54d73c73bf1ae9215e4a9e21b919b5b4f6e3d86a4bf85e4775ba9fa8cfa54e72a535a9cd974
+
+[tb]
+A/tb=22|../src/tb.v|4|1*588146
+BinW64/tb=3*584907
+R=../src/tb.v|4
+SLP=3*586335
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|8db8692708dc0985d408d2497dbc95fa81911189f8494c7c3a595e1ce83dad53
+
+[vga_sync_gen]
+A/vga_sync_gen=22|../src/vga_sync_gen.v|6|1*594158
+BinW64/vga_sync_gen=3*587108
+R=../src/vga_sync_gen.v|6
+SLP=3*592374
+Version=13.0.376.8320 (Windows64)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|2baa510cc54b701b0cdf40278836545d8be7015cad8267328f89e316e9c3fc507bdffcda992cd3ee580aca6037fcfcd5
+
+[~U]
+$root=12|0*209525|
+ball_fsm=12|0*204751|
+delay=12|0*195578|
+drawer=12|0*197015|
+paddle_fsm=12|0*209755|
+pong_main=12|0*195797|
+tb=12|0*194877||0x10
+vga_sync_gen=12|0*195163|

@@ -1,0 +1,1807 @@
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 pong_main.v : (38, 30): h_ball_pos is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 pong_main.v : (39, 30): v_ball_pos is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 pong_main.v : (40, 32): r_paddle_pos is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 pong_main.v : (41, 32): l_paddle_pos is not a valid left-hand side of a procedural assignment.
+# Compile failure 4 Errors 0 Warnings  Analysis time: 1[s].
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.3 [s].
+# KERNEL: SLP loading done - time: 0.1 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5514 kB (elbread=427 elab2=4949 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:27 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2868 pong_main.v : (38, 40): h_ball_pos is not a valid left-hand side of assign statement.
+# Error: VCP2868 pong_main.v : (39, 40): v_ball_pos is not a valid left-hand side of assign statement.
+# Error: VCP2868 pong_main.v : (40, 40): r_paddle_pos is not a valid left-hand side of assign statement.
+# Error: VCP2868 pong_main.v : (41, 40): l_paddle_pos is not a valid left-hand side of assign statement.
+# Compile failure 4 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module paddle_fsm found in current working library.
+# Info: VCP2113 Module ball_fsm found in current working library.
+# Info: VCP2113 Module drawer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2980 pong_main.v : (38, 1): Variable 'h_ball_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (39, 1): Variable 'v_ball_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (40, 1): Variable 'r_paddle_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (41, 1): Variable 'l_paddle_pos' cannot be driven by both procedural and continuous assignment.
+# Compile failure 4 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module paddle_fsm found in current working library.
+# Info: VCP2113 Module ball_fsm found in current working library.
+# Info: VCP2113 Module drawer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2980 pong_main.v : (38, 34): Variable 'h_ball_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (39, 34): Variable 'v_ball_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (40, 34): Variable 'r_paddle_pos' cannot be driven by both procedural and continuous assignment.
+# Error: VCP2980 pong_main.v : (41, 34): Variable 'l_paddle_pos' cannot be driven by both procedural and continuous assignment.
+# Compile failure 4 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module paddle_fsm found in current working library.
+# Info: VCP2113 Module ball_fsm found in current working library.
+# Info: VCP2113 Module drawer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+# Waveform file 'C:/My_Designs/pong/pong/src/test.awc' connected to 'C:/My_Designs/pong/pong/src/test.asdb'.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (38): Length of connection (1) does not match the length of port "L_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/paddle_fsm_inst".
+# SLP: Warning: pong_main.v (38): Length of connection (1) does not match the length of port "R_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/paddle_fsm_inst".
+# SLP: Warning: pong_main.v (57): Length of connection (1) does not match the length of port "L_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (57): Length of connection (1) does not match the length of port "R_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (57): Length of connection (1) does not match the length of port "H_BALL_POSITION" (11) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (57): Length of connection (1) does not match the length of port "V_BALL_POSITION" (11) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (89): Length of connection (1) does not match the length of port "H_BALL_POSITION" (11) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (89): Length of connection (1) does not match the length of port "V_BALL_POSITION" (11) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (89): Length of connection (1) does not match the length of port "L_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (89): Length of connection (1) does not match the length of port "R_PADDLE_POSITION" (11) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.5 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 1.0 [s]
+# SLP: Finished : 1.6 [s]
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 1.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:31 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:31 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+# Warning: WAVEFORM: Object matching /tb/my_pong_inst/Button_A not found in C:/My_Designs/pong/pong/src/test.asdb.
+# Warning: WAVEFORM: Object matching /tb/my_pong_inst/Button_B not found in C:/My_Designs/pong/pong/src/test.asdb.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:32 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Adding file C:\My_Designs\pong\pong\src\test.awc ... Done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:32 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run
+endsim
+# KERNEL: stopped at time: 360102600 ps
+# VSIM: Simulation has finished.
+# Error: Accelerated Waveform: Simulation database is not connected. Initialize simulation or load simulation database by opening waveform file (AWC, ASDB).
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:33 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# VSIM: 19 object(s) traced.
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module paddle_fsm found in current working library.
+# Info: VCP2113 Module ball_fsm found in current working library.
+# Info: VCP2113 Module drawer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.5 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:35 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+# VSIM: 12 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.2 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5517 kB (elbread=427 elab2=4953 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:37 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+# VSIM: 23 object(s) traced.
+run 100 ns
+# KERNEL: stopped at time: 1 us
+# Error: You do not have a valid license to run Advanced Dataflow. Contact Aldec for ordering information - sales@aldec.com
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5514 kB (elbread=427 elab2=4950 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:55 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 47 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5516 kB (elbread=427 elab2=4952 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  9:58 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# KERNEL: stopped at time: 3 us
+run 100 ns
+# KERNEL: stopped at time: 3100 ns
+run 100 ns
+# KERNEL: stopped at time: 3200 ns
+run 100 ns
+# KERNEL: stopped at time: 3300 ns
+run 100 ns
+# KERNEL: stopped at time: 3400 ns
+run 100 ns
+# KERNEL: stopped at time: 3500 ns
+run 100 ns
+# KERNEL: stopped at time: 3600 ns
+run 100 ns
+# KERNEL: stopped at time: 3700 ns
+run 100 ns
+# KERNEL: stopped at time: 3800 ns
+run 100 ns
+# KERNEL: stopped at time: 3900 ns
+run 100 ns
+# KERNEL: stopped at time: 4 us
+run 100 ns
+# KERNEL: stopped at time: 4100 ns
+run 100 ns
+# KERNEL: stopped at time: 4200 ns
+run 100 ns
+# KERNEL: stopped at time: 4300 ns
+run 100 ns
+# KERNEL: stopped at time: 4400 ns
+run 100 ns
+# KERNEL: stopped at time: 4500 ns
+run 100 ns
+# KERNEL: stopped at time: 4600 ns
+run 100 ns
+# KERNEL: stopped at time: 4700 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/drawer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 drawer.v : (62, 32): Undeclared identifier: DRAW_GAME_FIELD_BORDERS.
+# Error: VCP5103 drawer.v : (66, 29): Undeclared identifier: DRAW_BALL.
+# Error: VCP5103 drawer.v : (68, 18): Undeclared identifier: DRAW_BALL.
+# Error: VCP5103 drawer.v : (75, 32): Undeclared identifier: DRAW_PADDLES.
+# Error: VCP5103 drawer.v : (77, 21): Undeclared identifier: DRAW_PADDLES.
+# Compile failure 5 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 48 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5512 kB (elbread=427 elab2=4948 kernel=136 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  10:50 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 48 (100.00%) other processes in SLP
+# SLP: 10 (6.80%) signals in SLP and 137 (93.20%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5512 kB (elbread=427 elab2=4948 kernel=136 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  10:54 AM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+endsim
+# VSIM: Simulation has finished.
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 ball_fsm.v : (29, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (30, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (31, 2): Syntax error. Unexpected token: ).
+# Error: VCP2000 ball_fsm.v : (49, 10): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2020 ball_fsm.v : (55, 10): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (55, 10): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (79, 14): begin...end pair(s) mismatch detected. 3 <end> tokens are missing.
+# Error: VCP2020 ball_fsm.v : (79, 14): case/x/z...endcase pair(s) mismatch detected. 1 <endcase> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (79, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (84, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (94, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (99, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (108, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (115, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (122, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (122, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (130, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (130, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (136, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (143, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (143, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (151, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (151, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (158, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (165, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (165, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (173, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (173, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (179, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (186, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (186, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2545 paddle_fsm.v : (17, 21): Duplicate port identifier: R_PADDLE_POSITION.
+# Error: VCP2562 paddle_fsm.v : (17, 21): Redeclaration of port R_PADDLE_POSITION.
+# Error: VCP2505 paddle_fsm.v : (17, 21): Duplicate identifier: R_PADDLE_POSITION.
+# Compile failure 34 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 ball_fsm.v : (29, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (30, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (31, 2): Syntax error. Unexpected token: ).
+# Error: VCP2000 ball_fsm.v : (49, 10): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2020 ball_fsm.v : (55, 10): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (55, 10): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (79, 14): begin...end pair(s) mismatch detected. 3 <end> tokens are missing.
+# Error: VCP2020 ball_fsm.v : (79, 14): case/x/z...endcase pair(s) mismatch detected. 1 <endcase> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (79, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (84, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (94, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (99, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (108, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (115, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (122, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (122, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (130, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (130, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (136, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (143, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (143, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (151, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (151, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (158, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (165, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (165, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (173, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (173, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (179, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (187, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2545 paddle_fsm.v : (17, 21): Duplicate port identifier: R_PADDLE_POSITION.
+# Error: VCP2562 paddle_fsm.v : (17, 21): Redeclaration of port R_PADDLE_POSITION.
+# Error: VCP2505 paddle_fsm.v : (17, 21): Duplicate identifier: R_PADDLE_POSITION.
+# Compile failure 33 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 ball_fsm.v : (29, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (30, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (31, 2): Syntax error. Unexpected token: ).
+# Error: VCP2000 ball_fsm.v : (49, 10): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2020 ball_fsm.v : (55, 10): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (55, 10): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (79, 14): begin...end pair(s) mismatch detected. 3 <end> tokens are missing.
+# Error: VCP2020 ball_fsm.v : (79, 14): case/x/z...endcase pair(s) mismatch detected. 1 <endcase> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (79, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (84, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (94, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (99, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (108, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (115, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (122, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (122, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (130, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (130, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (136, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (143, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (143, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (151, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (151, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (158, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (165, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (165, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (173, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (173, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (179, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (187, 18): Syntax error. Unexpected token: end[_END].
+# Compile failure 30 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 ball_fsm.v : (29, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (30, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (31, 2): Syntax error. Unexpected token: ).
+# Error: VCP2000 ball_fsm.v : (47, 10): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2020 ball_fsm.v : (53, 10): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (53, 10): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (77, 14): begin...end pair(s) mismatch detected. 3 <end> tokens are missing.
+# Error: VCP2020 ball_fsm.v : (77, 14): case/x/z...endcase pair(s) mismatch detected. 1 <endcase> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (77, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (82, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (92, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (97, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (106, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (113, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (120, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (120, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (128, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (128, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (134, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (141, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (141, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (149, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (149, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (156, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (163, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (163, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (171, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (171, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (177, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (184, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (184, 12): Syntax error. Unexpected token: end[_END].
+# Compile failure 31 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Error: VCP2000 ball_fsm.v : (29, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (30, 9): Syntax error. Unexpected token: output[_OUTPUT].
+# Error: VCP2000 ball_fsm.v : (31, 2): Syntax error. Unexpected token: ).
+# Error: VCP2000 ball_fsm.v : (47, 10): Syntax error. Unexpected token: initial[_INITIAL].
+# Error: VCP2020 ball_fsm.v : (53, 10): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (53, 10): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (75, 14): begin...end pair(s) mismatch detected. 3 <end> tokens are missing.
+# Error: VCP2020 ball_fsm.v : (75, 14): case/x/z...endcase pair(s) mismatch detected. 1 <endcase> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (75, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (80, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (89, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (94, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (102, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (109, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (116, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (116, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (123, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (123, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (129, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (136, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (136, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (143, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (143, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (150, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (157, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (157, 12): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (164, 14): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (164, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2000 ball_fsm.v : (170, 14): Syntax error. Unexpected token: end[_END].
+# Error: VCP2020 ball_fsm.v : (177, 12): begin...end pair(s) mismatch detected. 1 <begin> tokens are missing.
+# Error: VCP2000 ball_fsm.v : (177, 12): Syntax error. Unexpected token: end[_END].
+# Compile failure 31 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/drawer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2020 drawer.v : (45, 7): begin...end pair(s) mismatch detected. 1 <end> tokens are missing.
+# Error: VCP2020 drawer.v : (45, 7): module/macromodule...endmodule pair(s) mismatch detected. 1 <endmodule> tokens are missing.
+# Error: VCP2000 drawer.v : (45, 7): Syntax error. Unexpected token: end[_END].
+# Error: VCP5103 drawer.v : (62, 28): Undeclared identifier: PLAYING.
+# Error: VCP5103 drawer.v : (89, 15): Undeclared identifier: PLAYING.
+# Compile failure 5 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/drawer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 drawer.v : (61, 28): Undeclared identifier: PLAYING.
+# Error: VCP5103 drawer.v : (88, 15): Undeclared identifier: PLAYING.
+# Compile failure 2 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/drawer.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'ball_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'drawer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/pong_main.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module paddle_fsm found in current working library.
+# Info: VCP2113 Module ball_fsm found in current working library.
+# Info: VCP2113 Module drawer found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'ball_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'drawer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5531 kB (elbread=427 elab2=4966 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:16 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+# VSIM: 20 object(s) traced.
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'pong_main' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'ball_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'drawer' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5531 kB (elbread=427 elab2=4966 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:16 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5526 kB (elbread=427 elab2=4962 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:17 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'ball_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5526 kB (elbread=427 elab2=4962 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:19 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "I" (1) on instance "/tb/del5".
+# SLP: Warning: tb.v (90): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del4".
+# SLP: Warning: tb.v (91): Length of connection (11) does not match the length of port "O" (1) on instance "/tb/del5".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5526 kB (elbread=427 elab2=4962 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:23 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Warning: VCP2958 tb.v : (90, 31): Parameter w not found.
+# Warning: VCP2958 tb.v : (91, 31): Parameter w not found.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 tb.v : (126, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (127, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (128, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (129, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (131, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (132, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (133, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (134, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (135, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (137, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (138, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (139, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (140, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (141, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Compile failure 14 Errors 2 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module vga_sync_gen found in current working library.
+# Info: VCP2113 Module delay found in current working library.
+# Info: VCP2113 Module pong_main found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2858 tb.v : (126, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (127, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (128, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (129, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (131, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (132, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (133, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (134, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (135, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (137, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (138, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (139, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (140, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (141, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Compile failure 14 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module vga_sync_gen found in current working library.
+# Info: VCP2113 Module delay found in current working library.
+# Info: VCP2113 Module pong_main found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP2868 tb.v : (126, 25): EncA_QA is not a valid left-hand side of assign statement.
+# Error: VCP2858 tb.v : (127, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (128, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (129, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (131, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (132, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (133, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (134, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (135, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (137, 18): EncA_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (138, 18): EncA_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (139, 18): EncB_QA is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (140, 18): EncB_QB is not a valid left-hand side of a procedural assignment.
+# Error: VCP2858 tb.v : (141, 18): Button_A is not a valid left-hand side of a procedural assignment.
+# Compile failure 14 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module vga_sync_gen found in current working library.
+# Info: VCP2113 Module delay found in current working library.
+# Info: VCP2113 Module pong_main found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Info: VCP2113 Module vga_sync_gen found in current working library.
+# Info: VCP2113 Module delay found in current working library.
+# Info: VCP2113 Module pong_main found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5531 kB (elbread=427 elab2=4966 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:26 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# Unit top modules: tb.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (87): Length of connection (1) does not match the length of port "I" (11) on instance "/tb/del1".
+# SLP: Warning: tb.v (87): Length of connection (1) does not match the length of port "O" (11) on instance "/tb/del1".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.4 [s]
+# SLP: Finished : 0.5 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5527 kB (elbread=427 elab2=4963 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:32 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+run 100 ns
+# KERNEL: stopped at time: 1200 ns
+run 100 ns
+# KERNEL: stopped at time: 1300 ns
+run 100 ns
+# KERNEL: stopped at time: 1400 ns
+run 100 ns
+# KERNEL: stopped at time: 1500 ns
+run 100 ns
+# KERNEL: stopped at time: 1600 ns
+run 100 ns
+# KERNEL: stopped at time: 1700 ns
+run 100 ns
+# KERNEL: stopped at time: 1800 ns
+run 100 ns
+# KERNEL: stopped at time: 1900 ns
+run 100 ns
+# KERNEL: stopped at time: 2 us
+run 100 ns
+# KERNEL: stopped at time: 2100 ns
+run 100 ns
+# KERNEL: stopped at time: 2200 ns
+run 100 ns
+# KERNEL: stopped at time: 2300 ns
+run 100 ns
+# KERNEL: stopped at time: 2400 ns
+run 100 ns
+# KERNEL: stopped at time: 2500 ns
+run 100 ns
+# KERNEL: stopped at time: 2600 ns
+run 100 ns
+# KERNEL: stopped at time: 2700 ns
+run 100 ns
+# KERNEL: stopped at time: 2800 ns
+run 100 ns
+# KERNEL: stopped at time: 2900 ns
+run 100 ns
+# KERNEL: stopped at time: 3 us
+run 100 ns
+# KERNEL: stopped at time: 3100 ns
+run 100 ns
+# KERNEL: stopped at time: 3200 ns
+run 100 ns
+# KERNEL: stopped at time: 3300 ns
+run 100 ns
+# KERNEL: stopped at time: 3400 ns
+run 100 ns
+# KERNEL: stopped at time: 3500 ns
+run 100 ns
+# KERNEL: stopped at time: 3600 ns
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5527 kB (elbread=427 elab2=4963 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  12:38 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/ball_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/tb.v $dsn/src/delay.v $dsn/src/pong_main.v $dsn/src/vga_sync_gen.v $dsn/src/drawer.v $dsn/src/ball_fsm.v $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Error: VCP5103 paddle_fsm.v : (54, 32): Undeclared identifier: NOTHING.
+# Error: VCP5103 paddle_fsm.v : (66, 31): Undeclared identifier: NOTHING.
+# Error: VCP5103 paddle_fsm.v : (79, 31): Undeclared identifier: NOTHING.
+# Error: VCP5103 paddle_fsm.v : (90, 31): Undeclared identifier: NOTHING.
+# Compile failure 4 Errors 0 Warnings  Analysis time: 0[s].
+alog -O2 -sve -msg 5 -sv2k12 -work pong $dsn/src/paddle_fsm.v
+# Pass 1. Scanning modules hierarchy.
+# Info: VCP2113 Module \$root found in current working library.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# Running Optimizer.
+# ELB/DAG code generating.
+# Info: VCP2113 Module \$root found in current working library.
+# $root top modules: tb.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# Warning: ALOG: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# done
+endsim
+# VSIM: Simulation has finished.
+asim -O5 +access +w_nets +accb +accr tb
+# ELBREAD: Elaboration process.
+# ELBREAD: Warning: ELBREAD_0049 Module 'paddle_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Warning: ELBREAD_0049 Module 'ball_fsm' does not have a `timescale directive, but previous modules do.
+# ELBREAD: Elaboration time 0.0 [s].
+# VSIM: Stack memory: 32MB
+# VSIM: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# KERNEL: Time resolution set to 100ps.
+# ELAB2: Create instances complete.
+# SLP: Started
+# SLP: Elaboration phase ...
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "L_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: pong_main.v (60): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/ball_fsm_inst".
+# SLP: Warning: pong_main.v (96): Length of connection (1) does not match the length of port "R_SCORE" (4) on instance "/tb/my_pong_inst/drawer_inst".
+# SLP: Warning: tb.v (87): Length of connection (1) does not match the length of port "I" (11) on instance "/tb/del1".
+# SLP: Warning: tb.v (87): Length of connection (1) does not match the length of port "O" (11) on instance "/tb/del1".
+# SLP: Elaboration phase ... done : 0.1 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.5 [s]
+# SLP: Finished : 0.6 [s]
+# SLP: 0 primitives and 50 (100.00%) other processes in SLP
+# SLP: 10 (6.41%) signals in SLP and 146 (93.59%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.6 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL Student Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 5537 kB (elbread=427 elab2=4972 kernel=137 sdf=0)
+# KERNEL: ASDB file was created in location C:\My_Designs\pong\pong\src\wave.asdb
+#  1:13 PM, Thursday, March 30, 2023
+#  Simulation has been initialized
+# Waveform file 'untitled.awc' connected to 'C:/My_Designs/pong/pong/src/wave.asdb'.
+run 100 ns
+# KERNEL: stopped at time: 100 ns
+run 100 ns
+# KERNEL: stopped at time: 200 ns
+run 100 ns
+# KERNEL: stopped at time: 300 ns
+run 100 ns
+# KERNEL: stopped at time: 400 ns
+run 100 ns
+# KERNEL: stopped at time: 500 ns
+run 100 ns
+# KERNEL: stopped at time: 600 ns
+run 100 ns
+# KERNEL: stopped at time: 700 ns
+run 100 ns
+# KERNEL: stopped at time: 800 ns
+run 100 ns
+# KERNEL: stopped at time: 900 ns
+run 100 ns
+# KERNEL: stopped at time: 1 us
+run 100 ns
+# KERNEL: stopped at time: 1100 ns
+# Error: You do not have valid license to run C Code Debug.
+# Error: Contact Aldec for ordering information sales@aldec.com
+# VSIM: 9 object(s) traced.
+endsim
+# VSIM: Simulation has finished.

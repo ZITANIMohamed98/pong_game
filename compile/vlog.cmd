@@ -1,0 +1,1 @@
+-o C:/My_Designs/pong/pong/compile -lc C:/My_Designs/pong/library.cfg -fl C:/My_Designs/pong/pong/projlib.cfg -pli "C:/Aldec/Active-HDL-Student-Edition/bin/systf.dll" -epr C:/My_Designs/pong/pong/compile/pong.epr -O2 -sve -msg 5 -sv2k12 -work pong C:/My_Designs/pong/pong/src/paddle_fsm.v 

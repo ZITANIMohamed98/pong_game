@@ -1,0 +1,7 @@
+i<>.\src\tb.v
+i<>.\src\delay.v
+i<>.\src\pong_main.v
+i<>.\src\vga_sync_gen.v
+i<>.\src\drawer.v
+i<>.\src\ball_fsm.v
+i<>.\src\paddle_fsm.v

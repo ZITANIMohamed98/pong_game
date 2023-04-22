@@ -1,0 +1,17 @@
+49
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "../src/ball_fsm.v" 1 ball_fsm
+~A 1 "../src/ball_fsm.v" 1 ball_fsm
+~M 1 "../src/delay.v" 1 delay
+~A 1 "../src/delay.v" 1 delay
+~M 1 "../src/drawer.v" 1 drawer
+~A 1 "../src/drawer.v" 1 drawer
+~M 1 "../src/paddle_fsm.v" 1 paddle_fsm
+~A 1 "../src/paddle_fsm.v" 1 paddle_fsm
+~M 1 "../src/pong_main.v" 1 pong_main
+~A 1 "../src/pong_main.v" 1 pong_main
+~M 3 "../src/tb.v" 4 tb
+~A 1 "../src/tb.v" 4 tb
+~M 1 "../src/vga_sync_gen.v" 6 vga_sync_gen
+~A 1 "../src/vga_sync_gen.v" 6 vga_sync_gen

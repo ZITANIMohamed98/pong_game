@@ -1,0 +1,9 @@
+[Files List]
+C:\Aldec\Active-HDL-Student-Edition\vlib\std/src/standard.vhd=S
+C:\My_Designs\pong\pong/src/drawer.v=S
+C:\My_Designs\pong\pong/src/ball_fsm.v=S
+C:\My_Designs\pong\pong/src/paddle_fsm.v=S
+C:\My_Designs\pong\pong/src/pong_main.v=S
+C:\My_Designs\pong\pong/src/delay.v=S
+C:\My_Designs\pong\pong/src/vga_sync_gen.v=S
+C:\My_Designs\pong\pong/src/tb.v=S
