@@ -23,11 +23,13 @@ module pong_main
 	
 	output wire [3:0] LED
   );
+   wire CLK_drawer;
+   wire CLK_fsm;
+   wire CLK_decoder;
    localparam BALL_W = 2;
    localparam BALL_H = 2;
    localparam PADDLE_H = SCR_H>>2;
    localparam MAX_SCORE  = 10;
-   
    wire 	    A_up;
    wire 	    A_down;
    wire 	    B_up;
@@ -37,26 +39,36 @@ module pong_main
    wire [10:0] r_paddle_pos; 
    wire [10:0] l_paddle_pos;	
    wire        game_over;
-   wire        l_score;
-   wire        r_score;
+   wire [3:0]    l_score;
+   wire [3:0]    r_score;
    
  decoder_up_down
 #(
 )
-decoder_up_down_inst
+decoder_up_down_R
 (
- .CLK(CLK5), // CLK 75MHz
+ .CLK    (CLK_decoder),   // KHz Frequency
  .RST(RST), // Active high reset
 
- .EncA_QA(EncA_QA), 
- .EncA_QB(EncA_QB),
- .EncB_QA(EncB_QA),
- .EncB_QB(EncB_QB),
+ .Enc_QA(EncB_QA), 
+ .Enc_QB(EncB_QB),
 	
-  .A_up(A_up),
-  .A_down(A_down),
-  .B_up(B_up),
-  .B_down(B_down)
+  .up(B_up),
+  .down(B_down)
+);
+ decoder_up_down
+#(
+)
+decoder_up_down_L
+(
+ .CLK    (CLK_decoder),   // KHz Frequency
+ .RST(RST), // Active high reset
+
+ .Enc_QA(EncA_QA), 
+ .Enc_QB(EncA_QB),
+	
+  .up(A_up),
+  .down(A_down)
 );
  paddle_fsm
 #(
@@ -64,18 +76,31 @@ decoder_up_down_inst
   .SCR_H(SCR_H),
   .PADDLE_H(PADDLE_H) 
 ) 	
-paddle_fsm_inst
+paddle_fsm_L
 ( 
-  .CLK(CLK), // CLK 75MHz
+  .CLK    (CLK_fsm),   // KHz Frequency
   .RST(RST), // Active high reset
   
-  .A_up(A_up),
-  .A_down(A_down),
-  .B_up(B_up),
-  .B_down(B_down),
+  .up(A_up),
+  .down(A_down),
 
-  .L_PADDLE_POSITION(l_paddle_pos),
-  .R_PADDLE_POSITION(r_paddle_pos)
+  .PADDLE_POSITION(l_paddle_pos)
+); 
+ paddle_fsm
+#(
+  .SCR_W(SCR_W),	
+  .SCR_H(SCR_H),
+  .PADDLE_H(PADDLE_H) 
+) 	
+paddle_fsm_R
+( 
+  .CLK    (CLK_fsm),   // KHz Frequency
+  .RST(RST), // Active high reset
+  
+  .up(B_up),
+  .down(B_down),
+
+  .PADDLE_POSITION(r_paddle_pos)
 ); 
 ball_fsm
 #(
@@ -89,7 +114,7 @@ ball_fsm
 ) 
 ball_fsm_inst
 (
-  .CLK, // CLK 75MHz
+  .CLK    (CLK_fsm),   // KHz Frequency
   .RST, // Active high reset
   
   .H_CNT, // horizontal pixel pointer
@@ -123,18 +148,18 @@ ball_fsm_inst
   )
   drawer_inst
   (			 
-    .CLK    (CLK),   // 75 MHz clock signal
-    .RST    (RST),       // active high reset
+      .CLK    (CLK),   // KHz Frequency
+      .RST    (RST),       // active high reset
 	
-	.GAME_OVER(game_over),
-    .L_SCORE(l_score),
-    .R_SCORE(r_score),
+      .GAME_OVER(game_over),
+      .L_SCORE(l_score),
+      .R_SCORE(r_score),
 	
-	.H_BALL_POSITION(h_ball_pos),
-	.V_BALL_POSITION(v_ball_pos),
+      .H_BALL_POSITION(h_ball_pos),
+      .V_BALL_POSITION(v_ball_pos),
 	
-	.L_PADDLE_POSITION(l_paddle_pos),
-	.R_PADDLE_POSITION(r_paddle_pos),		 
+     .L_PADDLE_POSITION(l_paddle_pos),
+     .R_PADDLE_POSITION(r_paddle_pos),		 
 	
     .H_CNT  (H_CNT),    // input horizontal pixel pointer 
     .V_CNT  (V_CNT),    // input vertical   pixel pointer
@@ -147,12 +172,13 @@ ball_fsm_inst
   //-----------------------------------------
   // assign LED to counter bits to indicate FPGA is working
   reg [31:0] heartbeat;
-  wire CLK5;
   always@(posedge CLK or posedge RST)
   if(RST) heartbeat <=             32'd0;
   else    heartbeat <= heartbeat + 32'd1;
-  assign CLK5 = heartbeat[24];
-  assign LED[3:0] = heartbeat[26:23];
+  assign CLK_drawer = heartbeat[2];
+  assign CLK_fsm = heartbeat[22];
+  assign CLK_decoder = heartbeat[22];
+  assign LED[3:0] = heartbeat[25:22];
   //----------------------------------------- 
   
 endmodule

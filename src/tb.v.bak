@@ -1,6 +1,5 @@
 `timescale 1ns / 100ps
 `default_nettype none
-
 module tb();
   //---------------------------------------
   // Generacja sygna³u resetu
@@ -30,13 +29,13 @@ module tb();
   
   wire       VID_HSYNC;
   wire       VID_VSYNC;
-  wire       VID_DE;
+  wire  [10:0]     VID_DE;
   wire [7:0] VID_RED;
   wire [7:0] VID_GREEN;
   wire [7:0] VID_BLUE; 
   wire       VID_HSYNC_d;
   wire       VID_VSYNC_d;
-  wire       VID_DE_d;
+  wire  [10:0]    VID_DE_d;
   
   wire [3:0] LED;
   //---------------------------------------
@@ -113,8 +112,8 @@ module tb();
     .EncA_QB(EncA_QB),   // encoder A input
     .EncB_QA(EncB_QA),   // encoder B input
     .EncB_QB(EncB_QB),   // encoder B input	
-	.Button_A(Button_A),  
-	.Button_B(Button_B),
+    .Button_A(Button_A),  
+    .Button_B(Button_B),
 
     .LED    (LED)        // general purpose LED output
     );   
@@ -123,23 +122,37 @@ module tb();
   //---------------------------------------
   initial
     begin
-//      EncA_QA = 1;
-//      EncA_QB = 1;
-//      EncB_QA = 1;
-//      EncB_QB = 1;
-//      #100 
-//      EncA_QA = 0;
-//	  EncA_QB = 1;
-//      EncB_QA = 1;
-//      EncB_QB = 0;
-//	  
-//	  #130
-//      EncA_QA = 1;
-//	  EncA_QB = 0;
-//      EncB_QA = 1;
-//      EncB_QB = 0;
-//	  
-//      // ... write more 
+      Button_A = 1;
+      EncA_QA = 1;
+      EncA_QB = 1;
+      EncB_QA = 1;
+      EncB_QB = 1;
+      #17480
+      EncA_QA = 0;
+      EncA_QB = 1;
+      EncB_QA = 0;
+      EncB_QB = 0;
+	  
+      #17480
+      EncA_QA = 0;
+      EncA_QB = 0;
+      EncB_QA = 0;
+      EncB_QB = 0;
+
+      #17480
+      EncA_QA = 1;
+      EncA_QB = 0;
+      EncB_QA = 1;
+      EncB_QB = 0;
+	
+      #17480
+      EncA_QA = 1;
+      EncA_QB = 1;
+      EncB_QA = 1;
+      EncB_QB = 0;
+      
+      
+
     end                               
              
   //---------------------------------------

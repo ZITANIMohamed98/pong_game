@@ -27,89 +27,94 @@ module drawer
   output reg [7:0] BLUE
 );
 
-  reg [3:0] state;
-  localparam IDLE      = 2'b00;
-  localparam PLAYING   = 2'b01;
-  localparam GAMEOVER = 2'b10;
-  localparam INITIAL_BALL_H = (SCR_W>>1)-1;
-  localparam INITIAL_BALL_V = (SCR_H>>1)-1;
-  localparam INITIAL_PADDLE  = SCR_H*85/256-1; 
+  reg [10:0] newFrame_H_ball_pos;
+  reg [10:0] newFrame_V_ball_pos;
+  reg [10:0] newFrame_L_paddle_pos;
+  reg [10:0] newFrame_R_paddle_pos;
   
-  always @ (posedge CLK) begin
-    if (RST) begin
-      state <= IDLE;
-    end 
-    else if (GAME_OVER) begin
-	   state<=GAMEOVER;
-	  end
-    else begin
-	 case (state)	
-	//--------------------------------------------------------------------------------------------------------------------------
-        IDLE: begin		    //Static state 	
-		  
-	if((H_CNT == INITIAL_BALL && V_CNT == INITIAL_BALL) || (H_CNT == INITIAL_BALL+1 && V_CNT == INITIAL_BALL) || (H_CNT == INITIAL_BALL && V_CNT == INITIAL_BALL+1) || (H_CNT == INITIAL_BALL+1 && V_CNT == INITIAL_BALL+1))	  // Ball size equal to 2 but I'll change this line after
-	          begin
-			 assign RED = 8'hFF;			 //Ball
-		         assign GREEN = 8'hFF;
-		         assign BLUE = 8'hFF; 
+  wire condi_gameBorders = (H_CNT == 0 || V_CNT == 0 || H_CNT == SCR_W - 1  || V_CNT == SCR_H - 1);
+  wire condi_ball = ((H_CNT >= newFrame_H_ball_pos && V_CNT >= newFrame_V_ball_pos) && (H_CNT < newFrame_H_ball_pos+BALL_W && V_CNT < newFrame_V_ball_pos+BALL_H));
+  wire condi_paddles = ((H_CNT== 2 && (V_CNT>=newFrame_L_paddle_pos && V_CNT<newFrame_L_paddle_pos+PADDLE_H)) || (H_CNT== SCR_W-3 && (V_CNT>=newFrame_R_paddle_pos && V_CNT<newFrame_R_paddle_pos+PADDLE_H)));
+  wire condi_l_top_segment =         (H_CNT>=SCR_W>>2&& H_CNT<=(SCR_W>>2)+2&&V_CNT==SCR_H>>4);
+  wire condi_l_middle_segment  =   (H_CNT>=SCR_W>>2&&H_CNT<=(SCR_W>>2)+2&&V_CNT==(SCR_H>>4)+2);
+  wire condi_l_bottom_segment =  (H_CNT>=SCR_W>>2&&H_CNT<=(SCR_W>>2)+2&&V_CNT==(SCR_H>>4)+2*2);
+
+  wire condi_l_left_top_segment =  (V_CNT>=SCR_H>>4&&V_CNT<=(SCR_H>>4)+2&&H_CNT==SCR_W>>2);
+  wire condi_l_right_top_segment =  (V_CNT>=SCR_H>>4&&V_CNT<=(SCR_H>>4)+2&&H_CNT==(SCR_W>>2)+2);
+
+  wire condi_l_left_bottom_segment = (V_CNT>=(SCR_H>>4)+2&&V_CNT<=(SCR_H>>4)+2*2&&H_CNT==SCR_W>>2);
+  wire condi_l_right_bottom_segment =  (V_CNT>=(SCR_H>>4)+2&&V_CNT<=(SCR_H>>4)+2*2&&H_CNT==(SCR_W>>2)+2);
+
+ wire condi_r_top_segment =       (H_CNT>=SCR_W-(SCR_W>>2)&&H_CNT<=SCR_W-(SCR_W>>2)+2&&V_CNT==SCR_H>>4);
+  wire condi_r_middle_segment  =   (H_CNT>=SCR_W-(SCR_W>>2)&&H_CNT<=SCR_W-(SCR_W>>2)+2&&V_CNT==(SCR_H>>4)+2);
+  wire condi_r_bottom_segment =    (H_CNT>=SCR_W-(SCR_W>>2)&&H_CNT<=SCR_W-(SCR_W>>2)+2&&V_CNT==(SCR_H>>4)+2*2);
+			 
+  wire condi_r_left_top_segment =  (V_CNT>=SCR_H>>4&&V_CNT<=(SCR_H>>4)+2&&H_CNT==SCR_W-(SCR_W>>2));
+  wire condi_r_right_top_segment =  (V_CNT>=SCR_H>>4&&V_CNT<=(SCR_H>>4)+2&&H_CNT==SCR_W-(SCR_W>>2)+2);
+			 
+  wire condi_r_left_bottom_segment =   (V_CNT>=(SCR_H>>3)+2&&V_CNT<=(SCR_H>>4)+2*2&&H_CNT==SCR_W-(SCR_W>>2));
+  wire condi_r_right_bottom_segment =  (V_CNT>=(SCR_H>>3)+2&&V_CNT<=(SCR_H>>4)+2*2&&H_CNT==SCR_W-(SCR_W>>2)+2);
+
+
+  wire condi_l_score_0 = (L_SCORE==0 &&(  condi_l_top_segment || condi_l_left_top_segment || condi_l_right_top_segment || condi_l_bottom_segment || condi_l_left_bottom_segment || condi_l_right_bottom_segment ));
+  wire condi_l_score_1 = (L_SCORE==1 &&(  condi_l_right_top_segment || condi_l_right_bottom_segment));
+  wire condi_l_score_2 = (L_SCORE==2 &&(  condi_l_top_segment || condi_l_right_top_segment || condi_l_middle_segment || condi_l_left_bottom_segment || condi_l_bottom_segment));
+  wire condi_l_score_3 = (L_SCORE==3 &&(  condi_l_top_segment || condi_l_right_top_segment || condi_l_middle_segment || condi_l_right_bottom_segment || condi_l_bottom_segment));
+  wire condi_l_score_4 = (L_SCORE==4 &&( condi_l_left_top_segment || condi_l_right_top_segment || condi_l_middle_segment || condi_l_right_bottom_segment));
+  wire condi_l_score_5 = (L_SCORE==5  &&( condi_l_top_segment || condi_l_left_top_segment || condi_l_middle_segment || condi_l_right_bottom_segment  || condi_l_bottom_segment));
+  wire condi_l_score_6 = (L_SCORE==6  &&( condi_l_top_segment || condi_l_left_top_segment || condi_l_middle_segment || condi_l_left_bottom_segment || condi_l_right_bottom_segment  || condi_l_bottom_segment));
+  wire condi_l_score_7 = (L_SCORE==7 &&( condi_l_top_segment || condi_l_right_top_segment || condi_l_right_bottom_segment));
+  wire condi_l_score_8 = (L_SCORE==8 &&(  condi_l_top_segment || condi_l_left_top_segment || condi_l_right_top_segment || condi_l_bottom_segment || condi_l_left_bottom_segment || condi_l_right_bottom_segment || condi_l_middle_segment));
+  wire condi_l_score_9 = (L_SCORE==9 &&(  condi_l_top_segment || condi_l_left_top_segment || condi_l_right_top_segment || condi_l_bottom_segment || condi_l_right_bottom_segment || condi_l_middle_segment));
+  wire condi_l_score    = (condi_l_score_0 || condi_l_score_1 || condi_l_score_2 || condi_l_score_3 || condi_l_score_4 || condi_l_score_5 || condi_l_score_6 || condi_l_score_7 || condi_l_score_8 || condi_l_score_9);
+
+  
+  wire condi_r_score_0 = (R_SCORE==0 &&( condi_r_top_segment || condi_r_left_top_segment ||  condi_r_right_top_segment || condi_r_bottom_segment || condi_r_left_bottom_segment || condi_r_right_bottom_segment ));
+  wire condi_r_score_1 = (R_SCORE==1 &&( condi_r_right_top_segment || condi_r_right_bottom_segment));
+  wire condi_r_score_2 = (R_SCORE==2 &&( condi_r_top_segment || condi_r_right_top_segment || condi_r_middle_segment || condi_r_left_bottom_segment ||  condi_r_bottom_segment));
+  wire condi_r_score_3 = (R_SCORE==3 &&( condi_r_top_segment || condi_r_right_top_segment || condi_r_middle_segment || condi_r_right_bottom_segment || condi_r_bottom_segment));
+  wire condi_r_score_4 = (R_SCORE==4 &&( condi_r_left_top_segment || condi_r_right_top_segment || condi_r_middle_segment || condi_r_right_bottom_segment));     
+  wire condi_r_score_5 = (R_SCORE==5  &&(condi_r_top_segment || condi_r_left_top_segment ||  condi_r_middle_segment || condi_r_right_bottom_segment  ||condi_r_bottom_segment));
+  wire condi_r_score_6 = (R_SCORE==6  &&(condi_r_top_segment || condi_r_left_top_segment ||  condi_r_middle_segment || condi_r_left_bottom_segment ||  condi_r_right_bottom_segment  || condi_r_bottom_segment));
+  wire condi_r_score_7 = (R_SCORE==7 &&( condi_r_top_segment || condi_r_right_top_segment || condi_r_right_bottom_segment));                                                                
+  wire condi_r_score_8 = (R_SCORE==8 &&( condi_r_top_segment || condi_r_left_top_segment ||  condi_r_right_top_segment || condi_r_bottom_segment ||    condi_r_left_bottom_segment ||   condi_r_right_bottom_segment || condi_r_middle_segment));
+  wire condi_r_score_9 = (R_SCORE==9 &&( condi_r_top_segment || condi_r_left_top_segment ||  condi_r_right_top_segment || condi_r_bottom_segment ||    condi_r_right_bottom_segment ||  condi_r_middle_segment));
+  wire condi_r_score    = (condi_r_score_0 || condi_r_score_1 || condi_r_score_2 || condi_r_score_3 || condi_r_score_4 || condi_r_score_5 || condi_r_score_6 || condi_r_score_7 || condi_r_score_8 || condi_r_score_9);
+always @ (posedge CLK) begin 
+       if(H_CNT==0&&V_CNT==0)begin
+		newFrame_H_ball_pos = H_BALL_POSITION;
+  		newFrame_V_ball_pos = V_BALL_POSITION;
+  		newFrame_L_paddle_pos = L_PADDLE_POSITION;
+ 		newFrame_R_paddle_pos = R_PADDLE_POSITION;
+	end
+       if (condi_gameBorders) begin 
+	     RED <= 8'hFF;	
+	     GREEN <= 8'hFF;	
+             BLUE <= 8'hFF;
+          end	
+	else if(condi_ball)	  
+	          begin 
+	     RED <= 8'h00;
+            GREEN <= 8'h00;		
+             BLUE <= 8'hFF;
 			  end
-        else if((H_CNT== 2 && (V_CNT>=INITIAL_PADDLE && V_CNT<INITIAL_PADDLE+PADDLE_H)) || (H_CNT== SCR_W-3 && (V_CNT>=R_PADDLE_POSITION || V_CNT<R_PADDLE_POSITION+PADDLE_H))) begin
-		     assign RED = 8'hFF;
-		     assign GREEN = 8'hFF;
-		     assign BLUE = 8'hFF; 			   //Paddle
+        else if(condi_paddles) begin 
+	     RED <= 8'hFF;
+            GREEN <= 8'h00;		
+             BLUE <= 8'h00;			   //Paddles
+		end
+         else if(condi_l_score || condi_r_score) begin 
+	     RED <= 8'hFF;
+            GREEN <= 8'hFF;		
+             BLUE <= 8'hFF;			   //Score
 		end
 	//--------------------------------------------------------------------------------------------------------------------------
-          else if (H_CNT == 0 || V_CNT == 0 || H_CNT == SCR_W - 1 || V_CNT == SCR_H - 1) begin 
-	     assign RED = 8'hFF;
-             assign GREEN = 8'hFF;		//Game Borders
-             assign BLUE = 8'hFF;
+          else begin  
+	     RED <= 8'h00;
+            GREEN <= 8'h00;		
+             BLUE <= 8'h00;
           end	
-          else
-	    begin 
-	     assign RED = 8'h00;
-             assign GREEN = 8'h00;		//Game Borders
-             assign BLUE = 8'h00;
-          end	
-				 
-//		  else if((H_CNT == H_BALL_POSITION && V_CNT == V_BALL_POSITION) || (H_CNT == H_BALL_POSITION+1 && V_CNT == V_BALL_POSITION) || (H_CNT == H_BALL_POSITION && V_CNT == V_BALL_POSITION+1) || (H_CNT == H_BALL_POSITION+1 && V_CNT == V_BALL_POSITION+1))	  // Ball size equal to 2 but I'll change this line after
-//          begin
-//			 assign RED = 8'hFF;			 //Ball
-//	         assign GREEN = 8'hFF;
-//	         assign BLUE = 8'hFF; 
-//		  end
-//		  else if((H_CNT== 2 && V_CNT>=L_PADDLE_POSITION && V_CNT<L_PADDLE_POSITION+PADDLE_H) || (H_CNT== SCR_W-3 && V_CNT>=R_PADDLE_POSITION && V_CNT<R_PADDLE_POSITION+PADDLE_H)) begin
-//		     assign RED = 8'hFF;
-//		     assign GREEN = 8'hFF;
-//		     assign BLUE = 8'hFF; 			   //Paddle
-//		  end 
-//		  else begin
-//			 assign RED = 8'h00;
-//          	 assign GREEN = 8'h00;
-//             assign BLUE = 8'h00;
-//		  end	 
-		  // TODO: implement initial score display Left and right
-       end	  
-	//--------------------------------------------------------------------------------------------------------------------------
-       PLAYING: begin		
-		   if((H_CNT == H_BALL_POSITION && V_CNT == V_BALL_POSITION) || (H_CNT == H_BALL_POSITION+1 && V_CNT == V_BALL_POSITION) || (H_CNT == H_BALL_POSITION && V_CNT == V_BALL_POSITION+1) || (H_CNT == H_BALL_POSITION+1 && V_CNT == V_BALL_POSITION+1))	  // Ball size equal to 2 but I'll change this line after
-	          begin
-		      assign RED = 8'hFF;			 //Ball
-		      assign GREEN = 8'hFF;
-		      assign BLUE = 8'hFF; 
-			  end
-		    else if((H_CNT== 2 && V_CNT>=L_PADDLE_POSITION && V_CNT<L_PADDLE_POSITION+PADDLE_H) || (H_CNT== SCR_W-3 && V_CNT>=R_PADDLE_POSITION && V_CNT<R_PADDLE_POSITION+PADDLE_H)) begin
-		     assign RED = 8'hFF;
-		     assign GREEN = 8'hFF;
-		     assign BLUE = 8'hFF; 			   //Paddle
-			end	
-			 // TODO: implement score display Left and right
-			end
-    //--------------------------------------------------------------------------------------------------------------------------
-        GAMEOVER: begin
-          // TODO: implement end of game behavior 
-        end
-      endcase
-    end
+     
   end
 	  	  
 endmodule
